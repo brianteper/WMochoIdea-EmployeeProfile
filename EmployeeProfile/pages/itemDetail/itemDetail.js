@@ -92,9 +92,19 @@
             request.data.properties.title = item.name;
             request.data.properties.description = "EmployeeIn Indo";
 
+            var records = Data.getRecordsFromName(item.name);
+            var projects = new Array();
+
+            // Display projects list
+            var projects = element.querySelector("article .item-projects");
+            for (var i = 0; i < records.length; i++) {
+                var project = document.createElement("h2");
+                projects.push(records.getItem(i).data.project);
+            }
+
             // Share recipe text
-            var recipe = "\r\nSkills\r\n" + item.skills.join("\r\n");
-            var recipe = "\r\nProyects\r\n" + item.skills.join("\r\n");
+            var recipe = "\r\nSkills\r\n" + item.skills;
+            recipe += "\r\nProyects\r\n" + projects.join(" - ");
 
 
             request.data.setText(recipe);
