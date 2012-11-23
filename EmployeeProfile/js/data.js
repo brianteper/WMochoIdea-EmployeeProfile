@@ -28,7 +28,8 @@
         getItemReference: getItemReference,
         getItemsFromGroup: getItemsFromGroup,
         resolveGroupReference: resolveGroupReference,
-        resolveItemReference: resolveItemReference
+        resolveItemReference: resolveItemReference,
+        getRecordsFromName: getRecordsFromName,
     });
 
     // Get a reference for an item, using the group key and item title as a
@@ -41,6 +42,10 @@
     // that belong to the provided group.
     function getItemsFromGroup(project) {
         return list.createFiltered(function (item) { return item.project === project; });
+    }
+
+    function getRecordsFromName(name) {
+        return list.createFiltered(function (item) { return item.name === name; });
     }
 
     // Get the unique group corresponding to the provided group key.

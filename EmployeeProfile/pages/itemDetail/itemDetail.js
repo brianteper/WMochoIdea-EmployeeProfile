@@ -17,8 +17,8 @@
         // populates the page elements with the app's data.
         ready: function (element, options) {
             item = options && options.item ? Data.resolveItemReference(options.item) : Data.items.getAt(0);
-            element.querySelector(".titlearea .pagetitle").textContent = item.proyecto;
-            element.querySelector("article .item-title").textContent = item.nombre;
+            element.querySelector(".titlearea .pagetitle").textContent = item.name;
+            element.querySelector("article .item-title").textContent = item.position;
             element.querySelector("article .item-subtitle").textContent = item.email;
             element.querySelector("article .item-image").src = item.backgroundImage;
             
@@ -31,35 +31,18 @@
                 skills.appendChild(skill);
             }
 
+            var records = Data.getRecordsFromName(item.name);
+
+            // Display projects list
+            var projects = element.querySelector("article .item-projects");
+            for (var i = 0; i < records.length; i++) {
+                var project = document.createElement("h2");
+                project.textContent = records.getItem(i).data.project;;
+                project.className = "skill";
+                projects.appendChild(project);
+            }
             // Register for datarequested events for sharing
             dtm.getForCurrentView().addEventListener("datarequested", this.onDataRequested);
-
-            // Handle click events from the Photo command
-            document.getElementById("photo").addEventListener("click", function (e) {
-                var camera = new capture.CameraCaptureUI();
-
-                // Capture a photo and display the share UI
-                camera.captureFileAsync(capture.CameraCaptureUIMode.photo).then(function (file) {
-                    if (file != null) {
-                        _photo = file;
-                        dtm.showShareUI();
-                    }
-                });
-            });
-
-            // Handle click events from the Video command
-            document.getElementById("video").addEventListener("click", function (e) {
-                var camera = new capture.CameraCaptureUI();
-                camera.videoSettings.format = capture.CameraCaptureUIVideoFormat.wmv;
-
-                // Capture a video and display the share UI
-                camera.captureFileAsync(capture.CameraCaptureUIMode.video).then(function (file) {
-                    if (file != null) {
-                        _video = file;
-                        dtm.showShareUI();
-                    }
-                });
-            });
 
             document.getElementById("pin").addEventListener("click", function (e) {
                 var uri = new Windows.Foundation.Uri("ms-appx:///" + item.tileImage);
@@ -103,38 +86,25 @@
 
         onDataRequested: function (e) {
             var request = e.request;
-            request.data.properties.title = item.title;
+            request.data.properties.title = item.name;
+            request.data.properties.description = "EmployeeIn Indo";
 
-            if (_photo != null) {
-                request.data.properties.description = "Recipe photo";
-                request.data.setStorageItems([_photo]);
-                //var reference = storage.Streams.RandomAccessStreamReference.createFromFile(_photo);
-                //request.data.properties.Thumbnail = reference;
-                //request.data.setBitmap(reference);
-                _photo = null;
-            }
-            else if (_video != null) {
-                request.data.properties.description = "Recipe video";
-                request.data.setStorageItems([_video]);
-                _video = null;
-            }
-            else {
-                request.data.properties.description = "Recipe skills and directions";
+            // Share recipe text
+            var recipe = "\r\nSkills\r\n" + item.skills.join("\r\n");
+            var recipe = "\r\nProyects\r\n" + item.skills.join("\r\n");
 
-                // Share recipe text
-                var recipe = "\r\nskills\r\n" + item.skills.join("\r\n");
-                request.data.setText(recipe);
 
-                // Share recipe image
-                var uri = item.backgroundImage;
-                if (item.backgroundImage.indexOf("http://") != 0)
-                    uri = "ms-appx:///" + uri;
+            request.data.setText(recipe);
 
-                uri = new Windows.Foundation.Uri(uri);
-                var reference = storage.Streams.RandomAccessStreamReference.createFromUri(uri);
-                request.data.properties.thumbnail = reference;
-                request.data.setBitmap(reference);
-            }
+            // Share recipe image
+            var uri = item.backgroundImage;
+            if (item.backgroundImage.indexOf("http://") != 0)
+                uri = "ms-appx:///" + uri;
+
+            uri = new Windows.Foundation.Uri(uri);
+            var reference = storage.Streams.RandomAccessStreamReference.createFromUri(uri);
+            request.data.properties.thumbnail = reference;
+            request.data.setBitmap(reference);
         },
 
         unload: function () {

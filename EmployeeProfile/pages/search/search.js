@@ -178,7 +178,7 @@
             // TODO: Perform the appropriate search on your data.
             if (window.Data) {
                 originalResults = Data.items.createFiltered(function (item) {
-                    return (item.title.indexOf(queryText) || item.directions.indexOf(queryText));
+                    return (item.name.indexOf(queryText) || item.project.indexOf(queryText));
                 });
             } else {
                 originalResults = new WinJS.Binding.List();

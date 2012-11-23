@@ -45,12 +45,12 @@
                     font-size: 20px;
                 }
 
-        .itemdetailpage .content article .directions {
+        .itemdetailpage .content article .projects {
             -ms-grid-column: 5;
             margin-left: 40px;
         }
 
-            .itemdetailpage .content article .directions .item-directions {
+            .itemdetailpage .content article .projects .item-projects {
                 margin-top: 20px;
                 font-size: 20px;
             }
