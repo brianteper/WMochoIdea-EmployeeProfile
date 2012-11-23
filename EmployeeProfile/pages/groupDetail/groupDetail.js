@@ -19,8 +19,14 @@
                 function groupDataSelector(item) { return group; }
             );
 
-            $('#project-image').attr('src', '/images/projects/' + group.toLowerCase() + '/' + group.toLowerCase() + '.jpg')
-            $('#project-image').attr('alt', group)
+            $('#project-image').attr('src', '/images/projects/' + group.toLowerCase() + '/' + group.toLowerCase() + '.jpg');
+            $('#project-image').attr('alt', group);
+
+            if (group.toLowerCase() == 'jamaica') {
+                $('#player')[0].play();
+            } else {
+                $('#player').hide();
+            }
 
             element.querySelector("header[role=banner] .pagetitle").textContent = group;
 
