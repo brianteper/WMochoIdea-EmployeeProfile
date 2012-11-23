@@ -67,7 +67,7 @@
     <Content Include="images\tiles\German_4_310_C.jpg" />
     <Content Include="images\tiles\Italian_4_310_C.jpg" />
     <Content Include="images\tiles\Italian_5_310_C.jpg" />
-    <Content Include="images\WideLogo.png" />
+    <Content Include="images\wideLogo.png" />
     <Content Include="js\converters.js" />
     <Content Include="js\data.js" />
     <Content Include="js\default.js" />

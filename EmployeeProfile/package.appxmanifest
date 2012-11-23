@@ -15,8 +15,8 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <VisualElements DisplayName="EmployeeIn" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="EmployeeIn" ForegroundText="light" BackgroundColor="#464646" ToastCapable="true">
-        <DefaultTile ShowName="allLogos" WideLogo="images\WideLogo.png" />
+      <VisualElements DisplayName="EmployeeIn" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="EmployeeIn" ForegroundText="dark" BackgroundColor="#FFFFFF" ToastCapable="true">
+        <DefaultTile WideLogo="images\wideLogo.png" />
         <SplashScreen Image="images\splashscreen.png" />
       </VisualElements>
       <Extensions>
