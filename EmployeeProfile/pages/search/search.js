@@ -81,10 +81,10 @@
 
         _generateFilters: function () {
             this._filters = [];
-            this._filters.push({ results: null, text: "All", predicate: function (item) { return true; } });
+            this._filters.push({ results: null, text: "Todos", predicate: function (item) { return true; } });
 
-            Data.groups.forEach(function (group) {
-                this._filters.push({ results: null, text: group.title, predicate: function (item) { return item.group.key === group.key; } });
+            Data.groups.forEach(function (project) {
+                this._filters.push({ results: null, text: project, predicate: function (item) { return item.project === project; } });
             }, this);
         },
 
@@ -178,7 +178,7 @@
             // TODO: Perform the appropriate search on your data.
             if (window.Data) {
                 originalResults = Data.items.createFiltered(function (item) {
-                    return (item.name.indexOf(queryText) || item.project.indexOf(queryText));
+                    return (item.name.indexOf(queryText) || item.project.indexOf(queryText) || item.position.indexOf(queryText) || item.skills.indexOf(queryText));
                 });
             } else {
                 originalResults = new WinJS.Binding.List();
@@ -206,7 +206,7 @@
 
     appModel.Search.SearchPane.getForCurrentView().onsuggestionsrequested = function (eventObject) {
         var text = eventObject.queryText.toLowerCase();
-        var terms = ["salt", "pepper", "water", "egg", "vinegar", "flour", "rice", "oil"];
+        var terms = ["WCF", "Entity Framework", "Windows Runtime", "MVC", "ASP.NET", "Sharepoint", "Arquitectura"];
 
         terms.forEach(function (term) {
             if (term.indexOf(text) == 0) {

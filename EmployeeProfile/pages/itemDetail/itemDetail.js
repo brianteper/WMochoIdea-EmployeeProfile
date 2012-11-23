@@ -24,7 +24,7 @@
             
             // Display skills list
             var skills = element.querySelector("article .item-skills");
-            for (var i = 0; i < item.skills.length; i++) {
+            for (var i = 0; i < item.skills.split().length; i++) {
                 var skill = document.createElement("h2");
                 skill.textContent = item.skills[i];
                 skill.className = "skill";
@@ -38,7 +38,7 @@
             for (var i = 0; i < records.length; i++) {
                 var project = document.createElement("h2");
                 project.textContent = records.getItem(i).data.project;;
-                project.className = "skill";
+                project.className = "project";
                 projects.appendChild(project);
             }
             // Register for datarequested events for sharing

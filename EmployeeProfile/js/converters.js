@@ -6,12 +6,7 @@
         return items.length;
     });
 
-    var skills = WinJS.Binding.converter(function (skills) {
-        return skills.join(' - ');
-    });
-
     WinJS.Namespace.define("Converters", {
-        totalCount: totalCount,
-        skills: skills,
+        totalCount: totalCount
     });
 })(WinJS);
