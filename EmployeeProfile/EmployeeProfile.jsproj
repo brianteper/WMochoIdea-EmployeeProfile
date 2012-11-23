@@ -56,7 +56,7 @@
     </AppxManifest>
     <Content Include="Certs\Contoso.pfx" />
     <Content Include="css\default.css" />
-    <Content Include="data\People.txt" />
+    <Content Include="data\People.js" />
     <None Include="EmployeeProfile_TemporaryKey.pfx" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />

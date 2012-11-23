@@ -13,7 +13,7 @@
     //    list.push(item);
     //});
 
-    WinJS.xhr({ url: "data/People.txt" }).then(function (xhr) {
+    WinJS.xhr({ url: "data/People.js" }).then(function (xhr) {
         var items = JSON.parse(xhr.responseText);
 
         // Add the items to the WinJS.Binding.List
