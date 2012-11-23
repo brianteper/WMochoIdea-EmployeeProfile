@@ -15,11 +15,11 @@
             var group = (options && options.groupKey) ? Data.resolveGroupReference(options.groupKey) : Data.groups.getAt(0);
             this._items = Data.getItemsFromGroup(group);
             var pageList = this._items.createGrouped(
-                function groupKeySelector(item) { return group.key; },
+                function groupKeySelector(item) { return group; },
                 function groupDataSelector(item) { return group; }
             );
 
-            element.querySelector("header[role=banner] .pagetitle").textContent = group.title;
+            element.querySelector("header[role=banner] .pagetitle").textContent = group;
 
             listView.itemDataSource = pageList.dataSource;
             listView.itemTemplate = element.querySelector(".itemtemplate");

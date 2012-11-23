@@ -17,7 +17,7 @@
 <body>
     <!-- These templates are used to display each item in the ListView declared below. -->
     <div class="headertemplate" data-win-control="WinJS.Binding.Template">
-        <button class="group-header win-type-x-large win-type-interactive" data-win-bind="groupKey: key"
+        <button class="group-header win-type-x-large win-type-interactive" data-win-bind="groupKey: this"
             onclick="Application.navigator.pageControl.navigateToGroup(event.srcElement.groupKey)" role="link" tabindex="-1" type="button">
             <span class="group-title win-type-ellipsis" data-win-bind="textContent: this"></span>
             <span class="group-chevron"></span>

@@ -98,7 +98,7 @@
             if (appView.value === appViewState.snapped) {
                 // If the page is snapped, the user invoked a group.
                 var group = Data.groups.getAt(args.detail.itemIndex);
-                this.navigateToGroup(group.key);
+                this.navigateToGroup(group);
             } else {
                 // If the page is not snapped, the user invoked an item.
                 var item = Data.items.getAt(args.detail.itemIndex);
