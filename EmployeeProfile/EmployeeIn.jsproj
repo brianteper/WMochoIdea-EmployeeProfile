@@ -59,6 +59,13 @@
     <Content Include="data\People.js" />
     <None Include="EmployeeProfile_TemporaryKey.pfx" />
     <Content Include="images\logo.png" />
+    <Content Include="images\projects\aysa\aysa.jpg" />
+    <Content Include="images\projects\banelco\banelco.jpg" />
+    <Content Include="images\projects\fresenius\fresenius.jpg" />
+    <Content Include="images\projects\isban\isban.jpg" />
+    <Content Include="images\projects\jamaica\jamaica.jpg" />
+    <Content Include="images\projects\sartorius\sartorius.jpg" />
+    <Content Include="images\projects\tenaris\tenaris.jpg" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
@@ -71,6 +78,7 @@
     <Content Include="js\converters.js" />
     <Content Include="js\data.js" />
     <Content Include="js\default.js" />
+    <Content Include="js\jquery.min.js" />
     <Content Include="js\navigator.js" />
     <Content Include="pages\about\about.css" />
     <Content Include="pages\about\about.html" />

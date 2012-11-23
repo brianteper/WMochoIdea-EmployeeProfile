@@ -19,6 +19,9 @@
                 function groupDataSelector(item) { return group; }
             );
 
+            $('#project-image').attr('src', '/images/projects/' + group.toLowerCase() + '/' + group.toLowerCase() + '.jpg')
+            $('#project-image').attr('alt', group)
+
             element.querySelector("header[role=banner] .pagetitle").textContent = group;
 
             listView.itemDataSource = pageList.dataSource;
