@@ -24,9 +24,12 @@
             
             // Display skills list
             var skills = element.querySelector("article .item-skills");
-            for (var i = 0; i < item.skills.split().length; i++) {
+
+            var skillsItems = item.skills.split(',');
+
+            for (var i = 0; i < skillsItems.length; i++) {
                 var skill = document.createElement("h2");
-                skill.textContent = item.skills[i];
+                skill.textContent = skillsItems[i];
                 skill.className = "skill";
                 skills.appendChild(skill);
             }
