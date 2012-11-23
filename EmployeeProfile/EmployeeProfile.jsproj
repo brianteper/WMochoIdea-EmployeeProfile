@@ -47,8 +47,8 @@
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageCertificateKeyFile>Certs\Contoso.pfx</PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>BD50B90554C65B04ECC2152DAC8346276A9E6BD8</PackageCertificateThumbprint>
+    <PackageCertificateKeyFile>EmployeeProfile_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>0E9F444D8EB0C008152493EE1CC329F77CE48DDF</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
@@ -57,7 +57,7 @@
     <Content Include="Certs\Contoso.pfx" />
     <Content Include="css\default.css" />
     <Content Include="data\People.txt" />
-    <Content Include="EmployeeProfile_TemporaryKey.pfx" />
+    <None Include="EmployeeProfile_TemporaryKey.pfx" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
