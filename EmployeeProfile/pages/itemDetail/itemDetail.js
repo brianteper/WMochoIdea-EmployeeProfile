@@ -17,24 +17,19 @@
         // populates the page elements with the app's data.
         ready: function (element, options) {
             item = options && options.item ? Data.resolveItemReference(options.item) : Data.items.getAt(0);
-            element.querySelector(".titlearea .pagetitle").textContent = item.group.title;
-            element.querySelector("article .item-title").textContent = item.title;
-            element.querySelector("article .item-subtitle").textContent = item.preptime;
+            element.querySelector(".titlearea .pagetitle").textContent = item.proyecto;
+            element.querySelector("article .item-title").textContent = item.nombre;
+            element.querySelector("article .item-subtitle").textContent = item.email;
             element.querySelector("article .item-image").src = item.backgroundImage;
-            element.querySelector("article .item-image").alt = item.shortTitle;
-
-            // Display ingredients list
-            var ingredients = element.querySelector("article .item-ingredients");
-            for (var i = 0; i < item.ingredients.length; i++) {
-                var ingredient = document.createElement("h2");
-                ingredient.textContent = item.ingredients[i];
-                ingredient.className = "ingredient";
-                ingredients.appendChild(ingredient);
+            
+            // Display skills list
+            var skills = element.querySelector("article .item-skills");
+            for (var i = 0; i < item.skills.length; i++) {
+                var skill = document.createElement("h2");
+                skill.textContent = item.skills[i];
+                skill.className = "skill";
+                skills.appendChild(skill);
             }
-
-            // Display cooking directions
-            element.querySelector("article .item-directions").textContent = item.directions;
-            element.querySelector(".content").focus();
 
             // Register for datarequested events for sharing
             dtm.getForCurrentView().addEventListener("datarequested", this.onDataRequested);
@@ -124,11 +119,10 @@
                 _video = null;
             }
             else {
-                request.data.properties.description = "Recipe ingredients and directions";
+                request.data.properties.description = "Recipe skills and directions";
 
                 // Share recipe text
-                var recipe = "\r\nINGREDIENTS\r\n" + item.ingredients.join("\r\n");
-                recipe += ("\r\n\r\nDIRECTIONS\r\n" + item.directions);
+                var recipe = "\r\nskills\r\n" + item.skills.join("\r\n");
                 request.data.setText(recipe);
 
                 // Share recipe image

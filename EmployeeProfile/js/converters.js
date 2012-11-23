@@ -7,7 +7,7 @@
     });
 
     var skills = WinJS.Binding.converter(function (skills) {
-        return skills.join();
+        return skills.join(' - ');
     });
 
     WinJS.Namespace.define("Converters", {

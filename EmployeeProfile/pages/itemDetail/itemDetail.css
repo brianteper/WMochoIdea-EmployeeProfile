@@ -31,16 +31,16 @@
             margin-top: 0;
         }
 
-        .itemdetailpage .content article .ingredients {
+        .itemdetailpage .content article .skills {
             -ms-grid-column: 3;
             margin-left: 40px;
         }
 
-            .itemdetailpage .content article .ingredients .item-ingredients {
+            .itemdetailpage .content article .skills .item-skills {
                 margin-top: 20px;
             }
 
-                .itemdetailpage .content article .ingredients .item-ingredients .ingredient {
+                .itemdetailpage .content article .skills .item-skills .skill {
                     padding-bottom: 12px;
                     font-size: 20px;
                 }
@@ -127,18 +127,18 @@
                 padding-bottom: 60px;
             }
 
-            .itemdetailpage .content article .ingredients {
+            .itemdetailpage .content article .skills {
                 -ms-grid-row: 2;
                 -ms-grid-column: 1;
                 margin-left: 0px;
                 margin-top: 12px;
             }
 
-                .itemdetailpage .content article .ingredients .item-ingredients {
+                .itemdetailpage .content article .skills .item-skills {
                     margin-top: 4px;
                 }
 
-                    .itemdetailpage .content article .ingredients .item-ingredients .ingredient {
+                    .itemdetailpage .content article .skills .item-skills .skill {
                         padding-bottom: 0px;
                         font-size: 9pt;
                     }

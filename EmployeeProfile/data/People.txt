@@ -2,6 +2,7 @@
 	"name" : "Mariano Sánchez",
 	"position" : "Software Architect",
     "project" : "Fresenius SigProv",
+	"email" : "marianos@lagash.com",
 	"skills" : [ "WCF",
         "Entity Framework",
         "Windows Runtime"
@@ -10,6 +11,7 @@
 	{ "backgroundImage" : "",
 	"name" : "Brian Teper",
 	"position" : "Software Architect",
+	"email" : "briant@lagash.com",
     "project" : "Fresenius SigProv",
 	"skills" : [ "WCF",
         "Entity Framework",
@@ -20,6 +22,7 @@
 	"name" : "Mariano Sánchez",
 	"position" : "Software Architect",
     "project" : "Tenaris",
+	"email" : "marianos@lagash.com",
 	"skills" : [ "WCF",
         "Entity Framework",
         "Windows Runtime"
@@ -29,6 +32,7 @@
 	"name" : "Guillermo Montiel",
 	"position" : "Software Architect",
     "project" : "Tenaris",
+	"email" : "guillermom@lagash.com",
 	"skills" : [ "WCF",
         "Entity Framework",
         "Windows Runtime"
@@ -38,6 +42,7 @@
 	"name" : "Tomas Ojeda",
 	"position" : "Software Architect",
     "project" : "Tenaris",
+	"email" : "tomaso@lagash.com",
 	"skills" : [ "WCF",
         "Entity Framework",
         "Windows Runtime"
