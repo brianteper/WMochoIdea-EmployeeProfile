@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "EmployeeProfile", "EmployeeProfile\EmployeeProfile.jsproj", "{BDF0C508-B63C-4581-BA30-28C6B82BAEAD}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "EmployeeIn", "EmployeeProfile\EmployeeIn.jsproj", "{BDF0C508-B63C-4581-BA30-28C6B82BAEAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
