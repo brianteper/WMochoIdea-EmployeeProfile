@@ -19,7 +19,7 @@
     <div class="headertemplate" data-win-control="WinJS.Binding.Template">
         <button class="group-header win-type-x-large win-type-interactive" data-win-bind="groupKey: key"
             onclick="Application.navigator.pageControl.navigateToGroup(event.srcElement.groupKey)" role="link" tabindex="-1" type="button">
-            <span class="group-title win-type-ellipsis" data-win-bind="textContent: title"></span>
+            <span class="group-title win-type-ellipsis" data-win-bind="textContent: this"></span>
             <span class="group-chevron"></span>
         </button>
     </div>
@@ -27,15 +27,14 @@
         <div class="item">
             <img class="item-image" src="#" data-win-bind="src: backgroundImage; alt: title" />
             <div class="item-overlay">
-                <h4 class="item-title" data-win-bind="textContent: shortTitle"></h4>
+                <h4 class="item-title" data-win-bind="textContent: name"></h4>
             </div>
         </div>
     </div>
     <div class="zoomedOutItemTemplate" data-win-control="WinJS.Binding.Template">
         <div class="zoomedOutItemContainer">
-            <img class="zoomeOutItemImage" src="#" data-win-bind="src: groupImage; alt: title" />
-            <h4 class="zoomedOutGroupTitle" data-win-bind="textContent: title; alt: title"></h4>
-            <div class="zoomedOutItemCount" data-win-bind="textContent: recipesCount;"></div>
+            <h4 class="zoomedOutGroupTitle" data-win-bind="textContent: this; alt: title"></h4>
+            <div class="zoomedOutItemCount" data-win-bind="textContent: this Converters.totalCount;"></div>
         </div>
     </div>
 
@@ -44,7 +43,7 @@
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Contoso Cookbook</span>
+                <span class="pagetitle">EmployeeIn</span>
             </h1>
         </header>
         <section aria-label="Main content" role="main">

@@ -1,0 +1,47 @@
+﻿[ { "backgroundImage" : "",
+	"name" : "Mariano Sánchez",
+	"position" : "Software Architect",
+    "project" : "Fresenius SigProv",
+	"skills" : [ "WCF",
+        "Entity Framework",
+        "Windows Runtime"
+     ],
+    "key" : 1 },
+	{ "backgroundImage" : "",
+	"name" : "Brian Teper",
+	"position" : "Software Architect",
+    "project" : "Fresenius SigProv",
+	"skills" : [ "WCF",
+        "Entity Framework",
+        "Windows Runtime"
+     ],
+    "key" : 1 },
+	{ "backgroundImage" : "",
+	"name" : "Mariano Sánchez",
+	"position" : "Software Architect",
+    "project" : "Tenaris",
+	"skills" : [ "WCF",
+        "Entity Framework",
+        "Windows Runtime"
+     ],
+    "key" : 1 },
+	{ "backgroundImage" : "",
+	"name" : "Guillermo Montiel",
+	"position" : "Software Architect",
+    "project" : "Tenaris",
+	"skills" : [ "WCF",
+        "Entity Framework",
+        "Windows Runtime"
+     ],
+    "key" : 1 },
+	{ "backgroundImage" : "",
+	"name" : "Tomas Ojeda",
+	"position" : "Software Architect",
+    "project" : "Tenaris",
+	"skills" : [ "WCF",
+        "Entity Framework",
+        "Windows Runtime"
+     ],
+    "key" : 1 
+}]
+

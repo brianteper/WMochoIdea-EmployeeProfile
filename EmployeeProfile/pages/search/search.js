@@ -117,7 +117,7 @@
                 listView.layout = new ui.GridLayout();
 
                 // TODO: Change "App Name" to the name of your app.
-                document.querySelector(".titlearea .pagetitle").textContent = "Contoso Cookbook";
+                document.querySelector(".titlearea .pagetitle").textContent = "EmployeeIn";
                 document.querySelector(".titlearea .pagesubtitle").textContent = "Results for “" + this._lastSearch + '”';
             }
         },
